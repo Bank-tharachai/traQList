@@ -1,0 +1,11 @@
+logo
+
+Our team
+
+Lead developer: Nattanon Tharachai
+Server and UI developer: Napat Thumwanit
+UI developer: Chatr Suttijaree
+iOS developer: Hatsumi Yamane
+
+About traP
+traP is a creative digital club at Tokyo Institute of Technology.

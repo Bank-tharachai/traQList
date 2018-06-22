@@ -1,0 +1,93 @@
+/* TODO */
+
+.shortcut {
+  color: red;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.shortcutArea{
+  height: 400px;
+  width: 250px;
+  background-color: #00FFBF;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  border-radius: 5px 5px 0px 0px;
+  display: none;
+}
+.shortcutAreaHead{
+  padding: 15px;
+  background-color: #71C1F0;
+  border-radius: 5px 5px 0px 0px;
+}
+.shortcutAreaBody{
+
+}
+.shortcutAreaBody p
+{
+  margin-left: 15px;
+  padding: 20px;
+}
+
+/* .shortcutAreaBody p::before
+{
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: black;
+  margin-left: -12px;
+  margin-top: 5px;
+  border-radius: 5px;
+} */
+/* .shortcutAreaBody div::before
+{
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: black;
+  margin-left: -12px;
+  margin-top: 5px;
+  border-radius: 5px;
+} */
+
+/* .namelist::before{
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: black;
+  margin-left: -12px;
+  margin-top: 5px;
+  border-radius: 5px;
+} */
+
+.namelist{
+  margin-left: 15px;
+  padding: 20px;
+}
+.shortcutInput{
+  border: transparent;
+
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+.namelist .delete-shortcut{
+  display: none;
+  float: right;
+}
+
+.delete-shortcut:hover{
+  cursor: crosshair;
+}
+
+.namelist .delete-shortcut.edit{
+  display: block;
+}

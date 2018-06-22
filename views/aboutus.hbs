@@ -1,0 +1,52 @@
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<body>
+  <div onresize="changeDisplay()" class="centered-wrapper" class="centered-content">
+        {{#if errors}}
+        <ul class="alert alert-danger">
+          {{#each errors}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+        {{/if}}
+        <img src="images/logo.png" alt="logo" vspace="50">
+    </div>
+    <div style="padding-left:50px;">
+        <h3>Our Team</h3>
+        <table style="width:400px; table-layout:fixed;overflow-x:auto;" align="left">
+            <tr>
+                <td>Lead Developer:</td>
+                <td><a href="https://www.linkedin.com/in/nattanon-tharachai/">
+                    Nattanon Tharachai</a></td>
+            </tr>
+            <tr>
+                <td>Server and UI Developer:</td>
+                <td>Napat Thumwanit</td>
+            </tr>
+            <tr>
+                <td>UI Developer:</td>
+                <td>Chatr Suttijaree</td>
+            </tr>
+            <tr>
+                <td>iOS Developer:</td>
+                <td>Hatsumi Yamane</td>
+            </tr>
+            <tr>
+                <td>Logo Design:</td>
+                <td>Wataru Yasunishi</td>
+            </tr>
+        </table>
+        <!--
+        <ul>
+            <li>Lead Developer: Nattanon Tharachai</li>
+            <li>Server and UI Developer: Napat Thumwanit</li>
+            <li>UI Developer: Chatr Suttijaree</li>
+            <li>iOS Developer: Hatsumi Yamane</li>
+        </ul>
+        -->
+        <br><br><br><br><br>
+        <h3>About traP</h3>
+        <p>
+        <a href="https://trap.jp/">traP</a> is a creative digital student club at <a href="https://www.titech.ac.jp/english/">Tokyo Institute of Technology</a>.
+        </p>
+    </div>
+</body>

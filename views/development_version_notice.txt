@@ -1,0 +1,12 @@
+Thank you for using the alpha version of traQList.
+
+Please note that some functions are still under construction. We will not be responsible for any damage or lost from the use of this version.
+We would appreciate any comment about your user experience. Please feel free to contact us at traqlist.trap@gmail.com.
+
+
+Issues
+Security:
+Passwords will be hashed, therefore we will not be able to view them from the server. However, a complete security check has not been made.
+
+Alarm:
+Is still not working?

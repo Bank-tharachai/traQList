@@ -1,0 +1,178 @@
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!-- Navigation bar -->
+<div class="nav-bar" ondragover="dragOverNav(event)" ondragenter="event.preventDefault()">
+  <a class="active" id="menu-toggle" href="#">&#9776;</a>
+  <a class="active" href="#" onclick="toggleTaskToExact(1)">Today</a>
+  <a class="active" href="#" onclick="toggleTaskToExact(2)">Tomorrow</a>
+  <a class="active" href="#" onclick="toggleTaskToExact(3)">Week</a>
+  <a class="active large-screen" href="#" onclick="toggleEdit()">Edit</a>
+  <a class="info" href="/info">Info</a>
+  <a class="logout" href="/logout">Logout</a>
+  <a class="bin" id="delfolder" href="#" onclick="deleteFolder()"><span class="glyphicon glyphicon-trash"></span></a>
+</div>
+
+  <body onresize="changeDisplay()">
+    <div class="daily" onclick="event.stopPropagation();">
+      <span class="close daily" onclick="closeDaily()">&times;</span>
+      <a href='#'><span class="glyphicon glyphicon-refresh" onclick="loadDailyReminder()"></span></a>
+      <p class="bound"></p>
+      <ul class="todolist daily">
+      </ul>
+    </div>
+    <div id="wrapper">
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+            <a href="#" onclick="addFolder()">
+                New Folder
+            </a>
+          </li>
+          <div class="folder-lists">
+          </div>
+        </ul>
+      </div>
+    <div id="page-content-wrapper" ondragenter="event.preventDefault()">
+    </div>
+
+    <div class="sort-wrapper">
+      <div class="sort" num="1" onclick="sortTask(1)">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+      </div>
+      <div class="sort" num="2" onclick="sortTask(2)">
+        !
+      </div>
+      <div class="sort" num="3" onclick="sortTask(3)">
+        A
+      </div>
+      <div class="sort" num="4" onclick="sortTask(4)">
+        ?
+      </div>
+    </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="urgency-wrapper">
+            <div class="urgency" num="0" onclick="changeUrgency(this,event)">
+              -
+            </div>
+            <div class="urgency" num="1" onclick="changeUrgency(this,event)">
+              !
+            </div>
+            <div class="urgency" num="2" onclick="changeUrgency(this,event)">
+              !!
+            </div>
+            <div class="urgency" num="3" onclick="changeUrgency(this,event)">
+              !!!
+            </div>
+          </div>
+          <form role="form" action="/edit" method="post" id="changedetail">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="new-taskname"
+              placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" class="form-control"
+              id="new-date" placeholder="date">
+            </div>
+            <div class="form-group" id="Alarm">
+              <label for="alarm">Alarm</label>
+              <input type="datetime-local" class="form-control"
+              id="new-alarm" placeholder="date">
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" id="description"
+              placeholder="Enter Description" rows="7" style="height:200px;"></textarea>
+            </div>
+            <button type="button" class="addAlarmButton" onclick="addMultiAlarm()">
+              Add Alarm
+            </button>
+
+            <button type="submit" class="btn btn-default"> Save </button>
+          </form>
+        </div>
+      </div>
+      <!-- end TODO -->
+          <!-- Sidebar -->
+        <main>
+          <div class="display">
+            <form id="search">
+              <input type="text" style="input" class="searchBox" id="tosearch" placeholder="Type.."> &#x1F50D;
+            </form>
+            <form id="target" action="/add">
+              <input type="text" style="input" name="taskname" class="searchBox" id="todoname" placeholder="what to do?">
+              <button type="submit" class="btn btn-circle">+</button>
+            </form>
+            <div id='task-type'>
+              All
+            </div>
+            {{!-- do scroll  --}}
+
+
+
+
+            <ul class="todolist all" >
+
+            </ul>
+            <ul class="todolist done" >
+
+            </ul>
+
+            {{!-- end of do scroll --}}
+
+
+            <!-- <br>
+            <button id="delete" action="/del" name="del">delete</button> -->
+          </div>
+        </main>
+      </div>
+
+  <!-- TODO -->
+  <!-- optional: implement toggleShortcut() -->
+  <div class = "shortcutArea">
+   <div class = "shortcutAreaHead">
+     <input type="text" class = "shortcutInput" placeholder="Shortcut"></input>
+   </div>
+   <div class = "shortcutAreaBody">
+      <div class = "insertNamelist"></div>
+   </div>
+  </div>
+
+  <div class = "shortcut" onclick="toggleShortcut()">
+    shortcut
+  </div>
+  <div id = "shortcut-block"></div>
+
+  <!-- END TODO -->
+  <div class="arrow-right" onclick="toggleTaskTypeRight(1)">
+    right
+  </div>
+  <div class="arrow-left" onclick="toggleTaskTypeLeft(1)">
+    left
+  </div>
+  <!--
+  <div class="dailybotton">
+    <img src="images/tech_chan1.png" width="100px">
+  </div>
+  -->
+
+
+
+
+
+</body>
+<style>
+/* regular css */
+#header {
+  position: fixed
+}
+
+@media screen and (max-width: 500px) {
+/* applies only if the screen is narrower than 500px */
+  #header {
+    position: static
+  }
+}
+</style>

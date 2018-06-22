@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css">
+  <link rel="stylesheet" type="text/css" href="css/modal.css">
+  <link rel="stylesheet" type="text/css" href="css/shortcut.css">
+  <link rel="stylesheet" type="text/css" href="css/daily.css">
+  <link rel="stylesheet" type="text/css" href="css/edit.css">
+  <link rel="stylesheet" type="text/css" href="css/register_login.css">
+  <link rel="stylesheet" href="css/default.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="script/Sortable.js"></script>
+  <script src="script/main.js"></script>
+  <script src="script/jquery.ui.touch-punch.min.js"></script>
+  <script src="script/mobile-drag-drop/index.min.js"></script>
+  <script src="script/mobile-drag-drop/scroll-behaviour.min.js"></script>
+  <script src="script/hammer.min.js"></script>
+
+  <title>traQList: {{ title }}</title>
+</head>
+
+  {{{body}}}
+
+<footer>
+  <div class="edit-bar">
+    <span onclick="toggleFolder();moving_multiple_task=1">
+      Move to Folder
+    </span>
+    <span onclick="deleteTask()">
+      delete
+    </span>
+  </div>
+</footer>
+</html>

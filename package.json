@@ -1,0 +1,40 @@
+{
+  "name": "todolist",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "lite-server",
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "apn": "^2.2.0",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^3.3.7",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "^2.6.9",
+    "depd": "^1.1.1",
+    "encodeurl": "^1.0.1",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "express-validator": "^4.3.0",
+    "hbs": "~4.0.1",
+    "jquery": "^3.2.1",
+    "merge-descriptors": "^1.0.1",
+    "mobile-drag-drop": "^2.1.0",
+    "morgan": "^1.9.0",
+    "ms": "^2.0.0",
+    "ncmb": "^2.2.2",
+    "node-schedule": "^1.2.5",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "password-hash": "^1.2.2",
+    "pbkdf2-password": "^1.2.1",
+    "serve-favicon": "~2.4.2",
+    "sql-injection": "0.0.6",
+    "sqlite3": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}

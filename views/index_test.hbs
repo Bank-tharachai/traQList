@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+</style>
+<script src="script/mobile-drag-drop/index.min.js"></script>
+<link rel="stylesheet" href="css/default.css">
+<script src="script/mobile-drag-drop/scroll-behaviour.min.js"></script>
+<script>
+function onDrop(ev){
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+function onDragEnter(ev){
+  ev.preventDefault();
+}
+function onDragOver(ev){
+  ev.preventDefault();
+}
+
+function onDragStart(ev){
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+window.onload = function(){
+  MobileDragDrop.polyfill({
+    dragImageTranslateOverride: MobileDragDrop.scrollBehaviourDragImageTranslateOverride
+  });
+  var box = document.getElementById('div1');
+  var object = document.getElementById('drag1');
+}
+</script>
+</head>
+<body>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondrop="onDrop(event)" ondragover="onDragOver(event)" ondragenter="onDragEnter(event)"></div>
+<br>
+<p id="drag1" draggable="true" ondragstart="onDragStart(event)">test test test</p>
+
+</body>
+</html>
